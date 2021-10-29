@@ -15,6 +15,26 @@ TODOs = {
     3: {"task": "profit"},
 }
 
+# part 1
+'''
+@app.route("/")
+def hello():
+    return "Hello, world!"
+'''
+
+# part 2
+'''
+app = Flask(__name__)
+api = Api(app)
+
+
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+
+api.add_resource(HelloWorld, "/")
+'''
 
 def abort_if_todo_not_found(todo_id):
     if todo_id not in TODOs:
